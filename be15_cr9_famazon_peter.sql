@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Mrz 2022 um 13:46
+-- Erstellungszeit: 12. Mrz 2022 um 17:06
 -- Server-Version: 10.4.22-MariaDB
 -- PHP-Version: 8.0.13
 
@@ -359,7 +359,7 @@ INSERT INTO `shipping` (`shipping_id`, `fk_invoice_id`, `shippingDate`, `deliver
 (1, 1, '2022-03-04', '2022-03-07'),
 (2, 2, '2022-03-02', '2022-03-03'),
 (3, 3, '2022-02-28', '2022-03-01'),
-(4, 4, '2022-02-17', '2022-03-19'),
+(4, 4, '2022-02-17', '2022-02-19'),
 (5, 5, '2022-03-10', '2022-03-11'),
 (6, 6, '2022-03-11', '2022-03-14');
 
