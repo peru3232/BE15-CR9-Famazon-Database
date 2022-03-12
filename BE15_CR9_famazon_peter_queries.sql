@@ -46,3 +46,10 @@ JOIN products p on p.product_id = i.fk_product_id
 WHERE a.city = "Salzburg"
 
 
+-- Querry 6: how many products was delivered to "Peter TestChar"?
+SELECT SUM(od.quantity) FROM shipping s
+JOIN invoice iv on iv.invoice_id = s.fk_invoice_id
+JOIN orderdetails od on od.fk_invoice_id = iv.invoice_id
+JOIN `order` o on o.order_id = od.fk_invoice_id
+JOIN customer c on o.fk_userName = c.userName
+WHERE c.lastName = "TestChar" AND c.firstName = "Peter"
