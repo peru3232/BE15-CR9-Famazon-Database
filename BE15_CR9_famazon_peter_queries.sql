@@ -23,4 +23,14 @@ WHERE od.fk_invoice_id in (
     SELECT s.fk_invoice_id FROM shipping s
     WHERE s.deliveryDate BETWEEN "2022-03-01" and CURRENT_DATE)
 
-    
+
+-- Querry 4: how much are the total for orders from customer "Jenny TestChar"?
+SELECT SUM(od.quantity * i.price) 
+FROM orderdetails od 
+JOIN `items-stock` i ON od.fk_item_id = i.item_id
+WHERE od.fk_order_id in (
+	SELECT o.order_id from `order` o
+	JOIN customer c ON c.userName = o.fk_userName
+    WHERE c.firstName = "Jenny" AND c.lastName = "TestChar")
+
+
